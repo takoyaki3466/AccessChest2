@@ -1,0 +1,21 @@
+{
+  "block.accesschest.access_chest": "Access Chest",
+  "block.accesschest.compressed_chest": "Compressed Chest",
+  "itemGroup.accesschest": "Access Chest+",
+  "tooltip.accesschest.grade": "Class %s",
+  "tooltip.accesschest.copy": "(Copy)",
+  "key.categories.accesschest": "Access Chest+",
+  "key.accesschest.collective_transfer": "Collective Transfer",
+  "key.accesschest.auto_collect": "Auto Collect",
+  "message.accesschest.prefix": "[Access Chest+] ",
+  "message.accesschest.mode_toggled": "Toggled %s: %s",
+  "message.accesschest.enabled": "Enabled",
+  "message.accesschest.disabled": "Disabled",
+  "gui.accesschest.filter": "Search",
+  "gui.accesschest.clear": "Clear",
+  "gui.accesschest.sort": "Sort",
+  "gui.accesschest.sort.tooltip": "Hold a number key 0-9 while clicking to set the sort priority of the shown items (default 7).",
+  "gui.accesschest.eject": "Eject",
+  "gui.accesschest.store_inventory": "StoreInv",
+  "gui.accesschest.store_hotbar": "StoreHotbar"
+}

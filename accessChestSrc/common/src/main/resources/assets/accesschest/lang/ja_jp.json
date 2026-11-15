@@ -1,0 +1,21 @@
+{
+  "block.accesschest.access_chest": "アクセスチェスト",
+  "block.accesschest.compressed_chest": "圧縮チェスト",
+  "itemGroup.accesschest": "Access Chest+",
+  "tooltip.accesschest.grade": "クラス %s",
+  "tooltip.accesschest.copy": "(コピー)",
+  "key.categories.accesschest": "Access Chest+",
+  "key.accesschest.collective_transfer": "一括転送",
+  "key.accesschest.auto_collect": "自動収納",
+  "message.accesschest.prefix": "[Access Chest+] ",
+  "message.accesschest.mode_toggled": "%sを切り換えました: %s",
+  "message.accesschest.enabled": "有効",
+  "message.accesschest.disabled": "無効",
+  "gui.accesschest.filter": "検索",
+  "gui.accesschest.clear": "クリア",
+  "gui.accesschest.sort": "整理",
+  "gui.accesschest.sort.tooltip": "数字キー 0〜9 を押しながらクリックすると、表示中のアイテムの整理優先度を設定します(既定 7)。",
+  "gui.accesschest.eject": "一括排出",
+  "gui.accesschest.store_inventory": "インベントリ収納",
+  "gui.accesschest.store_hotbar": "手持ち収納"
+}

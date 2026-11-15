@@ -1,0 +1,66 @@
+# Access Chest+ (Minecraft 1.21.1)
+
+色ごとにワールド全体で中身を共有する **Access Chest** と、1 ブロックに大量のアイテムを収める **Compressed Chest** を追加する MOD です。
+Minecraft 1.7.10 向けの Access Chest+(kegare 氏・Ato 氏)の機能を参考に、1.21.1 向けに一から書き直しています。旧版のソースコード・画像は使用していません。
+
+| 項目 | 内容 |
+|------|------|
+| Minecraft | 1.21.1 |
+| Java | 21 |
+| ローダー | Fabric(Loader 0.16.9 / Fabric API 0.109.0+1.21.1)、NeoForge 21.1.80、Forge 52.0.28 |
+| MOD ID | `accesschest` |
+| ライセンス | MIT(`LICENSE`) |
+
+> ビルド・ゲーム内での動作確認はまだ行っていません。設計と静的な整合性確認のみ実施済みです。
+
+## 機能
+
+- **Access Chest**: 16 色 × 4 等級(27 / 216 / 1728 / 13824 スロット)。同じ色の Access Chest はどこに置いても、どのディメンションでも同じ中身を共有します。等級によって見える範囲が変わります。
+  - アイテムのまま右クリック(スニークなし)で、どこからでも中身を開けます。
+  - スニーク + 右クリックで設置します。
+- **Compressed Chest**: 16 色 × 4 等級。中身はブロック自身に保存され、壊すと中身を落とします。
+- **GUI**: 12 列 × 8 行のスクロール表示、検索(部分一致 / Enter で完全一致 / `exact:` / `pri:N`)、整理、優先度設定(数字キー 0〜9 を押しながら「整理」)、一括排出、Shift でインベントリ収納・手持ち収納に切り替え。
+  - ホイール・スクロールバー・↑↓キーでスクロール。T(チャットキー)で検索欄にフォーカス、Ctrl + F でカーソル下のアイテムの ID で絞り込み。
+- **一括転送**(既定キー K): 有効にすると、Access Chest を持って他のインベントリを右クリックしたときにその中身を吸い込みます。スニーク時は逆に空きスロットへ流し込みます。
+- **自動収納**(既定キー J): 有効にすると、インベントリに入りきらなかった拾得アイテムを、持っている Access Chest に収納します。
+- ホッパーなどの自動搬入出に対応(`Container` として振る舞います)。
+
+## レシピ
+
+| 結果 | 材料 |
+|------|------|
+| Access Chest | チェストの上下左右にエンダーパール |
+| Compressed Chest | チェスト + エンダーアイ(不定形) |
+| 等級アップ | 中央に素材ブロック、周囲に同じ等級のオリジナルのチェスト 8 個(Access: ラピス→金→ダイヤ、Compressed: レッドストーン→金→ダイヤ) |
+| Access Chest のコピー | 等級 1/2/3 の Access Chest + エンダーチェスト 1/3/8 個(元のチェストは残ります。コピーは等級アップ不可) |
+| 着色 | チェスト + 染料 |
+
+## 設定
+
+`config/accesschest.properties`(初回起動時に作成)
+
+| キー | 既定値 | 範囲 | 使用側 |
+|------|--------|------|--------|
+| `eject_limit` | 96 | 1〜32767 | サーバー |
+| `wheel_scroll_rows` | 8 | 0〜127 | クライアント |
+
+## ビルド
+
+```bash
+./gradlew build
+```
+
+成果物は `accessChestSrc/<loader>/build/libs/` に出力されます。
+
+## プロジェクト構成
+
+- `accessChestSrc/common` — ローダー非依存のロジック・GUI・リソース
+- `accessChestSrc/fabric` / `neoforge` / `forge` — 各ローダーのエントリーポイントとプラットフォーム実装
+- `buildSrc` — 共通 Gradle 規約
+- `docs/DESIGN.md` — 旧版の解析結果と設計
+
+## クレジットとライセンス
+
+- 本 MOD のコードと画像は MIT ライセンスです(`LICENSE`)。
+- 機能の原案: Access Chest+ for Minecraft 1.7.10(kegare 氏, Ato 氏)。旧版 JAR には MMPL_J(Minecraft Mod Public License 日本語訳)が同梱されていました。本 MOD は旧版のコード・画像を含みません。
+- GUI のスクロールバーは Minecraft 本体のスプライト(`minecraft:container/creative_inventory/scroller`)を実行時に参照しており、MOD には同梱していません。

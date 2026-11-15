@@ -1,0 +1,10 @@
+{
+  "type": "accesschest:chest_copy",
+  "category": "misc",
+  "chest": "accesschest:access_chest",
+  "grade": "class_2",
+  "material": {
+    "item": "minecraft:ender_chest"
+  },
+  "material_count": 3
+}

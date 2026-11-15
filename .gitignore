@@ -1,0 +1,32 @@
+# プロジェクトの除外パス
+/.gradle/
+/build/
+/build/classes/java/main/
+/manaitaSrc/common/build/
+
+/manaitaSrc/fabric/build/
+/manaitaSrc/fabric/.gradle/
+/manaitaSrc/fabric/runs/
+
+/manaitaSrc/forge/build/
+/manaitaSrc/forge/runs/
+
+/manaitaSrc/neoforge/build/
+/manaitaSrc/neoforge/run/
+
+/buildSrc/.gradle/
+/buildSrc/build/
+/.idea/
+
+# プロジェクトの除外パス
+/accessChestSrc/common/build/
+/accessChestSrc/common/build/classes/java/main/
+/accessChestSrc/fabric/.gradle/
+/accessChestSrc/forge/build/
+/accessChestSrc/neoforge/build/
+/accessChestSrc/neoforge/build/classes/java/main/
+/accessChestSrc/fabric/runs/
+/accessChestSrc/fabric/build/
+/accessChestSrc/forge/runs/
+/accessChestSrc/neoforge/run/
+/accessChestSrc/neoforge/runs/

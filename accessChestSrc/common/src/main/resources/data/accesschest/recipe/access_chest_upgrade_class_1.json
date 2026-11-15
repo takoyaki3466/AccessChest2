@@ -1,0 +1,9 @@
+{
+  "type": "accesschest:chest_upgrade",
+  "category": "misc",
+  "chest": "accesschest:access_chest",
+  "material": {
+    "item": "minecraft:lapis_block"
+  },
+  "from_grade": "class_0"
+}

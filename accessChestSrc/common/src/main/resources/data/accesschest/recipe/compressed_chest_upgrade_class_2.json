@@ -1,0 +1,9 @@
+{
+  "type": "accesschest:chest_upgrade",
+  "category": "misc",
+  "chest": "accesschest:compressed_chest",
+  "material": {
+    "item": "minecraft:gold_block"
+  },
+  "from_grade": "class_1"
+}

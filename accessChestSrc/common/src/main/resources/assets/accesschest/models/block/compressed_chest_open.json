@@ -1,0 +1,7 @@
+{
+  "parent": "accesschest:block/storage_chest_open",
+  "textures": {
+    "body": "accesschest:block/compressed_chest",
+    "latch": "accesschest:block/chest_latch"
+  }
+}
