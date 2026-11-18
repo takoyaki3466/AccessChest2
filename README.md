@@ -42,23 +42,8 @@ Minecraft 1.7.10 向けの Access Chest+(kegare 氏・Ato 氏)の機能を参考
 | `eject_limit` | 96 | 1〜32767 | サーバー |
 | `wheel_scroll_rows` | 8 | 0〜127 | クライアント |
 
-## ビルド
-
-```bash
-./gradlew build
-```
-
-成果物は `accessChestSrc/<loader>/build/libs/` に出力されます。
-
-## プロジェクト構成
-
-- `accessChestSrc/common` — ローダー非依存のロジック・GUI・リソース
-- `accessChestSrc/fabric` / `neoforge` / `forge` — 各ローダーのエントリーポイントとプラットフォーム実装
-- `buildSrc` — 共通 Gradle 規約
-- `docs/DESIGN.md` — 旧版の解析結果と設計
-
 ## クレジットとライセンス
 
-- 本 MOD のコードと画像は MIT ライセンスです(`LICENSE`)。
+- 本 MOD のコードと画像は MMPL_J ライセンスです(`LICENSE`)。
 - 機能の原案: Access Chest+ for Minecraft 1.7.10(kegare 氏, Ato 氏)。旧版 JAR には MMPL_J(Minecraft Mod Public License 日本語訳)が同梱されていました。本 MOD は旧版のコード・画像を含みません。
 - GUI のスクロールバーは Minecraft 本体のスプライト(`minecraft:container/creative_inventory/scroller`)を実行時に参照しており、MOD には同梱していません。
